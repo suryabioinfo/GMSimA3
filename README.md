@@ -1,6 +1,6 @@
 # GMSimA (version-3)
 GMSimA
-Graphical Membrane Simulation Analyzer — a GUI suite for analyzing protein/peptide–lipid bilayer simulations from GROMACS (.tpr/.gro/.pdb + .xtc), built on MDAnalysis.
+(Graphical Membrane Simulation Analyzer) — a GUI suite for analyzing protein/peptide–lipid bilayer simulations from GROMACS (.tpr/.gro/.pdb + .xtc), built on MDAnalysis.
 
 GMSimA produces publication-quality figures (300 dpi PNG), the underlying data in open formats (.xvg/.csv/.txt), representative structures (.pdb), a full run log, and a self-contained report.html per run.
 Available Analyses
