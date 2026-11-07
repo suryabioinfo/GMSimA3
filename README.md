@@ -34,6 +34,7 @@ gmx trjconv -s run.tpr -f a.xtc -pbc mol -center -ur compact -o b.xtc
 Installation:
 
 No Installation required. User can access binary by running command from the directory './gmsima'
+
 GMSimA has been tested on Ubuntu Linux Distribution 20.04/22.04/24.04 LTS. Support to other OS will soon be released.  
 
 Usage
