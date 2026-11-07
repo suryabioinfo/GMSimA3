@@ -35,15 +35,15 @@ Installation:
 
 No Installation required. User can access binary by running command from the directory './gmsima'
 
-GMSimA has been tested on Ubuntu Linux Distribution 20.04/22.04/24.04 LTS. Support to other OS will soon be released.  
+GMSimA has been tested on Ubuntu Linux Distribution 20.04/22.04/24.04 LTS.
 
 Usage
 
-    Load a topology and the trajectory (.xtc). The topology must contain exactly the atoms in the XTC (e.g. the dry system for a dry XTC):
-        .tpr — preferred; exact bonds, masses and charges.
-        .gro / .pdb — any GROMACS version, no GROMACS install needed. Bonds are guessed from distances and cleaned (no cross-residue H bonds, only consecutive-residue links, disulfides added); masses are guessed from atom names; charges are unavailable (no current module needs them). Use this for .tpr files newer than the installed MDAnalysis (e.g. GROMACS 2026 with MDAnalysis ≤ 2.10): gmx editconf -f system.tpr -o system.gro. Optionally pip install TprParser lets such .tpr files load directly.
+    Load a topology and the trajectory (.xtc). The topology must contain exactly the atoms in the XTC (e.g. the dry system for a dry XTC): .tpr (preferred), .gro / .pdb.
+   
     The Protein/Membrane group selectors auto-populate from the topology; any MDAnalysis selection string can be typed instead.
     Pick a stride, choose analyses, choose an output folder, Run Analysis.
-    Results land in a timestamped subfolder together with GMSimA.log and report.html. The Stop button halts the run at the next module boundary and keeps everything already computed.
+    Results are saved in a timestamped subfolder together with GMSimA.log and report.html. The Stop button halts the run at the next module boundary and keeps everything already computed.
+    The report.html provide single document with complete analysis profile.
 
 Multiple peptides (V2): if the protein group contains several bonded molecules, every interaction analysis runs once per peptide with suffixed outputs (deltaz_pep1.xvg, tauoff_pep2_residence.txt, ...).
