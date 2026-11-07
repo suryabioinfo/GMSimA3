@@ -27,7 +27,7 @@ Required trajectory preprocessing
 
 Analyze trajectories in which molecules are whole and the membrane is centered:
 
-gmx trjconv -s a.tpr -f a.xtc -pbc mol -center -ur compact -o b.xtc
+gmx trjconv -s run.tpr -f a.xtc -pbc mol -center -ur compact -o b.xtc
 
 (optionally followed by a rot+trans fit for tilt/FEL work). GMSimA screens the first, middle and last frames for broken molecules, unwrapped ("nojump"-style) coordinates, membrane misalignment and off-center systems — warnings are reported in the log, status bar and HTML report, and the analysis always proceeds.
 Installation (from source)
@@ -45,9 +45,5 @@ Usage
     The Protein/Membrane group selectors auto-populate from the topology; any MDAnalysis selection string can be typed instead.
     Pick a stride, choose analyses, choose an output folder, Run Analysis.
     Results land in a timestamped subfolder together with GMSimA.log and report.html. The Stop button halts the run at the next module boundary and keeps everything already computed.
-
-Supporting a new lipid species is one dictionary entry in core/lipids.py (CHARMM36 naming: C2x = sn-2 chain, C3x = sn-1 chain).
-
-Force fields (V2): CHARMM36(m) one-residue lipids and the AMBER Lipid14/17/21 family (three-residue lipids: sn-1 chain, head, sn-2 chain) are both supported and auto-detected; AMBER acyl chains are identified by bond connectivity, so no atom-name tables are needed.
 
 Multiple peptides (V2): if the protein group contains several bonded molecules, every interaction analysis runs once per peptide with suffixed outputs (deltaz_pep1.xvg, tauoff_pep2_residence.txt, ...).
