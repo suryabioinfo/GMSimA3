@@ -5,7 +5,7 @@ GMSimA
 GMSimA produces publication-quality figures (300 dpi PNG), the underlying data in open formats (.xvg/.csv/.txt), representative structures (.pdb), a full run log, and a self-contained report.html per run.
 Available Analyses
 
-Intrinsic membrane properties (always computed on the whole membrane; species-resolved results are decompositions, never restricted calculations):
+Intrinsic membrane properties:
 
     Area per lipid — per-leaflet box-area APL, plus per-species Voronoi APL
     Membrane thickness — phosphate-to-phosphate, per frame
@@ -14,7 +14,7 @@ Intrinsic membrane properties (always computed on the whole membrane; species-re
     Density profile — headgroup/glycerol/chains/water, plus per species
     Lateral diffusion — PBC-unwrapped, COM-corrected, FFT-based MSD with the 2D Einstein relation
 
-Protein/peptide–membrane interactions (driven by the auto-detected, user-overridable Protein and Membrane groups):
+Protein–membrane interaction Properties:
 
     Minimum distance (ξ) with contact-percentage distribution
     Penetration depth (ΔZ) vs the bilayer midplane, with membrane reference lines and a per-residue membrane-position profile
