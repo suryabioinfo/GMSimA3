@@ -29,14 +29,13 @@ Analyze trajectories in which molecules are whole and the membrane is centered:
 
 gmx trjconv -s run.tpr -f a.xtc -pbc mol -center -ur compact -o b.xtc
 
-(optionally followed by a rot+trans fit for tilt/FEL work). GMSimA screens the first, middle and last frames for broken molecules, unwrapped ("nojump"-style) coordinates, membrane misalignment and off-center systems — warnings are reported in the log, status bar and HTML report, and the analysis always proceeds.
-Installation (from source)
+(optionally followed by a rot+trans fit for tilt/FEL work). 
 
-python -m venv venv && source venv/bin/activate
-pip install .
-GMSimA            # or: python main.py
+Installation:
 
-Requires Python ≥ 3.9. Dependencies (installed automatically): numpy, scipy, pandas, matplotlib, MDAnalysis ≥ 2.4, PySide6.
+No Installation required. User can access binary by running command from the directory './gmsima'
+GMSimA has been tested on Ubuntu Linux Distribution 20.04/22.04/24.04 LTS. Support to other OS will soon be released.  
+
 Usage
 
     Load a topology and the trajectory (.xtc). The topology must contain exactly the atoms in the XTC (e.g. the dry system for a dry XTC):
